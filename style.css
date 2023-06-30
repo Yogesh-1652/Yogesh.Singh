@@ -93,7 +93,7 @@ section .title::after {
 }
 .navbar.sticky {
   padding: 29px 0;
-  background: linear-gradient(#30302f, #3e77a2 , rgb(102, 55, 42) ); 
+  background: linear-gradient(#a0a09e, #5e6163 , rgb(127, 126, 126) ); 
   box-shadow: 0px 0px 30px rgba(161, 36, 36, 0.8);
 } 
 .navbar .max-width {
@@ -116,26 +116,26 @@ section .title::after {
 }
 .navbar .menu li a {
   display: block;
-  color: #fff;
+  color: #02fa06;
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
   transition: color 0.3s ease;
 }
 .navbar .menu li a:hover {
-  color: rgb(237, 12, 57);
+  color: rgb(255, 255, 255);
 }
 .navbar.sticky .menu li a:hover {
-  color: rgb(245, 12, 12);
+  color: rgb(255, 255, 255);
 }
 
-.navbar.sticky .logo img {
-  border: 3px solid rgb(49, 51, 49);
-}
+/* .navbar.sticky .logo img {
+  /* border: 3px solid rgb(69, 169, 69); */
+  /* margin: 0; */ 
 
 /* menu btn styling */
 .menu-btn {
-  color: #fff;
+  color: #040404;
   font-size: 23px;
   cursor: pointer;
   display: none;
@@ -170,15 +170,25 @@ section .title::after {
 
 .home {
   display: flex;
-  background: url("images/background.jpg") no-repeat center;
+  background: url("images/bg.jpg") no-repeat center;
   height: 100vh;
-  color: #fff;
+  color: #f3f0f0;
   min-height: 600px;
   background-size: cover;
   background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
-  border-radius: 0px 0px 200px 200px;
 }
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  /* background-color: rgba(0, 0, 0, 0.55); */
+}
+
+
 .home .max-width {
   width: 100%;
   display: inline-flex;
@@ -223,9 +233,9 @@ section .title::after {
   height: 100%;
   background: linear-gradient(
     115deg,
-    #4fcf70,
+    #2acc53,
     #34332f,
-    #a767e5,
+    #8e6bb0,
     #304148,
     #4a5b51
   );
@@ -321,9 +331,11 @@ section .title::after {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: transparent;
+  border: 1px solid black;
+  background-color: #57d65b;;
+  /* background: transparent; */
   font-size: 1.5em;
-  color: #444;
+  color: #ffffff;
   text-decoration: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: 0.5s;
@@ -340,25 +352,22 @@ section .title::after {
   content: "who i am";
 }
 .about {
-  border-radius: 200px 200px 0px 0px;
   background: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .about .about-content .left {
-  width: 300px;
+  width: 450px;
   height: 450px;
-  box-shadow: -10px -10px #ceccb5, 0 0 20px rgba(0, 0, 0, 0.30);
-  border-radius: 8px;
   overflow: hidden;
 }
 .about .about-content .left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.25s ease-in-out;
 }
-.about .about-content .left img:hover {
-  transform: scale(1.15) rotate(1deg);
-}
+/* .about .about-content .left img:hover {
+  transform: scale(1.15) rotate(6deg);
+} */
 .about .about-content .right {
   width: 55%;
 }
@@ -453,88 +462,146 @@ section .title::after {
 
 /* skills section styling */
 .skills {
-  color: #fff;
-  background: #333;
+  color: #030303;
+  background: #f7f6f6;
   height: 100vh;
-  border-radius: 200px 200px 0px 0px;
-  /* background: linear-gradient(#3a6273,#DB0B5F, #6613c5); */
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .skills .title::after {
   content: "what i know";
-  background: #333;;
+  background: #ffffff;;
 }
 .skills .title::before {
-  background: rgb(250, 250, 250);
+  background: rgb(8, 8, 8);
   transform: translateX(-50%);
 }
 .skills .skills-content .column {
   width: calc(100% - 10px);
 }
 .skills .left .text {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 650;
   margin-bottom: 30px;
   padding: 5px;
-  border: 5px solid rgb(229, 190, 104);
-  background: linear-gradient(#30302f, #573c8e , rgb(7, 82, 82) );
+  color: #4fb475;
   display: flex;
   text-align: justify;
   justify-content: center;
-  border-radius: 45px;
 }
-.skills .skills-content .left p {
-  text-align: justify;
-}
-.skills .skills-content .right .bars {
-  margin-bottom: 15px;
-  margin-top: 10px;
-}
-.skills .skills-content .right .info {
+.container1 {
   display: flex;
-  margin-bottom: 5px;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-}
-.skills .skills-content .right span {
-  font-weight: 500;
-  font-size: 18px;
-}
-.skills .skills-content .right .line {
-  height: 5px;
   width: 100%;
-  background: lightgray;
-  position: relative;
-}
-.skills .skills-content .right .line::before {
-  content: "";
-  position: absolute;
   height: 100%;
-  left: 0;
-  top: 0;
-  background: crimson;
 }
-.skills-content .right .html::before {
-  width: 90%;
+.skills1 h2{
+  font-weight: 400px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  color: #171515;
+  font-size: 16px;
 }
-.skills-content .right .css::before {
-  width: 70%;
+
+.progress-bar{
+  background: #bbb9b9;
+  width: 900px;
+  height: 10px;
+  border-radius: 5px;
 }
-.skills-content .right .js::before {
-  width: 80%;
+.progress-bar div{
+  height: 10px;
+  border-radius: 5px;
+  width: 0%;
 }
-.skills-content .right .Python::before {
-  width: 80%;
+.progress-bar div span{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  float: right;
+  margin-top: -15px;
+  margin-right: -20px;
+  color: #1c1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.skills-content .right .Cpp::before {
-  width: 80%;
+.html{
+  background: #e91e63;
+  animation: html 1s linear forwards;
 }
-.skills-content .right .DSA::before {
-  width: 75%;
+.css{
+  background: #cddc39;
+  animation: css 1s linear forwards;
 }
-.skills-content .right .mysql::before {
-  width: 80%;
+.javascript{
+  background: #00bcd4;
+  animation: javascript 1s linear forwards;
 }
+.cpp{
+  background: #99e030;
+  animation: cpp 1s linear forwards;
+}
+.java{
+  background: #ffeb3b;
+  animation: java 1s linear forwards;
+}
+.dsa{
+  background: #9c27b0;
+  animation: dsa 1s linear forwards;
+}
+
+.html span{
+  border: 1px solid #e91e63;
+}
+.css span{
+  border: 1px solid #cddc39;
+}
+.javascript span{
+  border: 1px solid #00bcd4;
+}
+.cpp span{
+  border: 1px solid #99e030;
+}
+.java span{
+  border: 1px solid #ffeb4b;
+}
+.dsa span{
+  border: 1px solid #9c27b0;
+}
+@keyframes html{
+  100%{
+    width: 90%;
+  }
+}
+@keyframes css{
+  100%{
+    width: 85%;
+  }
+}
+@keyframes javascript{
+  100%{
+    width: 80%;
+  }
+}
+@keyframes cpp{
+  100%{
+    width: 75%;
+  }
+}
+@keyframes java{
+  100%{
+    width: 70%;
+  }
+}
+@keyframes dsa{
+  100%{
+    width: 65%;
+  }
+}
+
 
 /* services section styling */
 
@@ -590,15 +657,15 @@ section .title::after {
 
 /* My Project section styling */
 .timeline .title::before {
-  background: rgb(255, 255, 255);
+  background: rgb(13, 13, 13);
   transform: translateX(-50%);
 }
 .timeline .title::after {
   content: "Major Works";
-  background-color:  #333;
+  background-color:  #f3f4f1;
 }
 #title-1{
-  color: white;
+  color: rgb(10, 10, 10);
 } 
 .timeline {
   position: relative;
@@ -606,9 +673,9 @@ section .title::after {
   margin: 0 auto;
   box-sizing: border-box;
   /* background: linear-gradient(#3a6273,#DB0B5F, #6613c5); */
-  background-color:  #333;
+  background-color:  #f3f4f1;
   font-family: Helvetica, sans-serif;
-  border-radius: 0px 0px 200px 200px;
+  box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -678,9 +745,9 @@ section .title::after {
   width: 0;
   z-index: 1;
   left: 25px;
-  border: medium solid white;
+  border: medium solid rgb(255, 255, 255);
   border-width: 15px 15px 15px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent rgb(1, 1, 1) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -882,6 +949,7 @@ footer span a:hover {
   .menu-btn {
     display: block;
     z-index: 999;
+    color: white;
   }
   .menu-btn i.active:before {
     content: "\f00d";
